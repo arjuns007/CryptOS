@@ -717,10 +717,36 @@ a:focus, a:hover {
 .center-row{
   text-align: center;
 }
+.converter {
+  padding: 2rem 2rem 4rem;
+  margin-bottom: 0;
 
-.jumbotron form{
+}
+.converter h2{
+  padding-top: 1rem;
+}
+
+
+.converter form{
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: 100px;
+  
+}
+
+.converter form input{
+  padding: 4px 20px;
+  width: 250px;
+  margin-left: 16px;
+}
+
+.converter form select{
+padding: 4px 20px;
+width: 250px !important;
+
+}
+.converter form label{
+  margin-right: 10px;
 }
 
 
