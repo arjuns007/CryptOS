@@ -730,7 +730,7 @@ a:focus, a:hover {
 .converter form{
   justify-content: center;
   margin-top: 40px;
-  margin-left: 100px;
+  display: grid;
   
 }
 
@@ -738,6 +738,7 @@ a:focus, a:hover {
   padding: 4px 20px;
   width: 250px;
   margin-left: 16px;
+  margin-bottom: 10px;
 }
 
 .converter form select{
@@ -746,9 +747,17 @@ width: 250px !important;
 
 }
 .converter form label{
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
+.converter .results{
+  color: #000;
+}
+
+.converter button{
+  margin: 0 15px;
+  width: 80px;
+}
 
 /*=================================================================
   Footer section
