@@ -107,12 +107,6 @@ def blog(request):
     d = top_bar()  
     return render(request, 'blog.html',d)
 
-
-def home(request):
-    url3 = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false'
-    data3 = requests.get(url3).json()
-    # return HttpResponse(data)
-
-    context = {'data': data3}
-
-    return render(request, 'home.html', context)
+def guide(request):
+    d = top_bar()  
+    return render(request, 'guide.html',d)
