@@ -88,8 +88,12 @@ def cal_con(request):
                 else:
                     Result = round(value1*price*rates[curr2],2)                  
         
+        k= {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1,'curr2': curr2}
+        
+        
+        k.update(d)
+        return render(request, 'cal_con.html', k)
 
-        return render(request, 'cal_con.html', {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1,'curr2': curr2}.update(d))
     
     else:
         return render(request, 'cal_con.html', d)
