@@ -662,6 +662,54 @@ a:focus, a:hover {
 }
 
 /*=================================================================
+  Calculator section
+==================================================================*/
+.center-row{
+  text-align: center;
+}
+.converter {
+  padding: auto;
+  margin-bottom: 0;
+  
+
+}
+.converter h2{
+  padding-top: 1rem;
+}
+
+
+.converter form{
+  justify-content: center;
+  margin-top: 40px;
+  display: grid;
+  
+}
+
+.converter form input{
+  padding: 4px 20px;
+  width: 250px;
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
+
+.converter form select{
+padding: 4px 20px;
+width: 250px !important;
+
+}
+.converter form label{
+  margin-right: 16px;
+}
+
+.converter .results{
+  color: #000;
+}
+
+.converter button{
+  margin: 0 15px;
+  width: 80px;
+}
+/*=================================================================
   Footer section
 ==================================================================*/
 .top-footer {
