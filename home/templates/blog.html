@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>CRYPTOS-Blogs</title>
+
+    <!-- Mobile Specific Meta
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- CSS
+  ================================================== -->
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+
+
+</head>
+
+<body id="body">
+
+
+
+    <!--
+Fixed Navigation
+==================================== -->
+    <section class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="currency-status">
+                        <li>
+                            <a href="#">
+                                <i class='{{c_btc}}'></i>
+                                <span>BTC/USD</span>
+                                <span>{{btc}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_eth}}"></i>
+                                <span>ETH/USD</span>
+                                <span>{{eth}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_bnb}}"></i>
+                                <span>BNB/USD</span>
+                                <span>{{bnb}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_usdt}}"></i>
+                                <span>USDT/USD</span>
+                                <span>{{usdt}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_ada}}"></i>
+                                <span>ADA/USD</span>
+                                <span>{{ada}}</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header  navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{% url 'home' %}">
+                            <img src="{% static 'home/images/logo.png' %}" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="tf-ion-android-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="exchange.html">Exchange</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="guide.html">Guide</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog section" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title text-center">
+                        <h2>Cryptocurrency Blogs for you</h2>
+                        <span class="border"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single blog post -->
+                <article class="col-12 col-md-6">
+                    <div class="post-item blog-item ">
+                        <div class="post-thumb">
+                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post1.jpg' %}"
+                                alt="Generic placeholder image">
+                        </div>
+                        <div class="post-title blog-title">
+                            <h3 class="mt-0"> <a href="">One BTC will be worth a Lambo by 2022, and a Bugatti by 2023:
+                                    Kraken CEO</a> </h3>
+                        </div>
+                        <div class="post-meta">
+                            <span>By</span> <a href="" class="">SAMUEL HAIG</a>
+                        </div>
+                        <div class="post-content">
+                            <p>Appearing on Bloomberg, Kraken CEO Jesse Powell explained why he believes dollar-based
+                                long-term price predictions for Bitcoin are flawed, emphasizing the inflationary nature
+                                of fiat currencies. Responding to a question asking Powell for end of year price
+                                predictions, Kraken’s CEO said: “I think I said Bitcoin is going to infinity and that’s
+                                kind of hard to comprehend because I’m measuring it in terms of dollars.”</p>
+                        </div>
+                        <a class="btn btn-main" href="#">Read more</a>
+                    </div>
+                </article>
+                <!-- /single blog post -->
+
+                <!-- single blog post -->
+                <article class="col-12 col-md-6">
+                    <div class="post-item">
+                        <div class="post-thumb">
+                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post2.jpg' %}"
+                                alt="Generic placeholder image">
+                        </div>
+                        <div class="post-title">
+                            <h3 class="mt-0"> <a href=""> iPhone user blames Apple for $600K Bitcoin theft via fake
+                                    app</a> </h3>
+                        </div>
+                        <div class="post-meta">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <span>By</span> <a href="" class="">HELEN PARTZ</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <span>By</span> <span> 31st March 2021</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="post-content">
+                            <p>A scam cryptocurrency app on Apple’s app distribution service App Store has reportedly
+                                stolen $600,000 Bitcoin (BTC) from one iOS user. Cryptocurrency holder Phillipe
+                                Christodoulou fell victim to a scam app on the App Store, losing nearly all his life
+                                savings to a fake crypto wallet application, The Washington Post reports Tuesday.</p>
+                        </div>
+                        <a class="btn btn-main" href="#">Read more</a>
+                    </div>
+                </article>
+                <!-- end single blog post -->
+
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> <!-- end section -->
+
+
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
+                            <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
+                            <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>
+                            <li><a href="{% url 'blog' %}"><h6>Blogs</h6></a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/Cryptos-100778582123682"><h6>Facebook</h6></a></li>
+                            <li><a href="https://twitter.com/Cryptos95647385"><h6>Twitter</h6></a></li>
+                            <li><a href="cryptossolution@gmail.com"><h6>Gmail</h6></a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                </div>
+            </div> <!-- end container -->
+        </div>
+
+    </footer> <!-- end footer -->
+
+    <!-- end Footer Area
+    ========================================== -->
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    <!-- Main jQuery -->
+    <script src="{% static 'home/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'home/plugins/bootstrap/dist/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/plugins/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'home/plugins/slick-carousel/slick/slick.min.js' %}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Smooth Scroll js -->
+    <script src="{% static 'home/plugins/smooth-scroll/dist/js/smooth-scroll.min.js' %}"></script>
+
+    <!-- Custom js -->
+    <script src="{% static 'home/js/script.js' %}"></script>
+
+</body>
+
+</html>
