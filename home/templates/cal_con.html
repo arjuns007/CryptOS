@@ -1,0 +1,256 @@
+{% load static %} 
+<!DOCTYPE html>
+
+<html lang="zxx">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>CRYPTOS</title>
+
+    <!-- Mobile Specific Meta
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+
+
+</head>
+
+<body id="body">
+
+
+    <!--
+Fixed Navigation
+==================================== -->
+    <section class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="currency-status">
+                        <li>
+                            <a href="#">
+                                <i class= '{{c_btc}}' ></i>
+                                <span>BTC/USD</span>
+                                <span>{{btc}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_eth}}"></i>
+                                <span>ETH/USD</span>
+                                <span>{{eth}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_bnb}}"></i>
+                                <span>BNB/USD</span>
+                                <span>{{bnb}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_usdt}}"></i>
+                                <span>USDT/USD</span>
+                                <span>{{usdt}}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="{{c_ada}}"></i>
+                                <span>ADA/USD</span>
+                                <span>{{ada}}</span>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header  navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{% url 'home' %}">
+                            <img src="{% static 'home/images/logo.png' %}" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="tf-ion-android-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="exchange.html">Exchange</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="guide.html">Guide</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="jumbotron converter">
+        <div class="container">
+            <h2 class="center-row">Cryptocurrency Calculator</h2>
+            <p class="lead center-row">Convert the Cryptocurrency</p>
+            
+            <form action="{% url 'cal_con' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group mb-2">
+                    <input type="number" step="0.01" value="0"  placeholder="Enter Amount to Convert" class="form-control" id="amount" name="value" required />
+                </div>
+                <div class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <select class="form-control" id="currency-1" name="curr1" required>
+                            <option value="BTC">Bitcoin(BTC)</option>
+                            <option value="ETH">Ethereum(ETH)</option>
+                            <option value="BNB">Binancecoin(BNB)</option>
+                            <option value="USDT">Tether(USDT)</option>
+                            <option value="ADA">Cardano(ADA)</option>
+                            <option value="DOT">Polkadot(DOT)</option>
+                            <option value="XRP">Ripple(XRP)</option>
+                            <option value="UNI">Uniswap(UNI)</option>
+                            <option value="LTC">Litecoin(LTC)</option>
+                            <option value="THETA">Theta Token(THETA)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label>convert to</label>
+                        <select class="form-control" id="currency-2" name="curr2" required>
+                            <option value="EUR">Euro(EUR)</option>
+                            <option value="USD">United States Dollar(USD)</option>
+                            <option value="INR">Indian Rupee(INR)</option>
+                            <option value="GBP">Great Britain Pound(GBP)</option>
+                            <option value="CAD">Canadian Dollar(CAD)</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="center-row ">
+                    {% if value %}
+                    <p class="results"> {{ value }} {{ curr1 }}  {{ Result }} {{ curr2 }}</p>
+                    {% endif %}
+                    <!-- <button type="reset" class="btn calculate-btn btn-primary mb-2 ">Reset</button> -->
+                    <button type="submit" class="btn calculate-btn btn-primary mb-2">Convert</button>
+                </div>
+            </form>    
+ 
+            
+        </div>
+
+        
+        <div class="result">
+            <p>
+                <span class="given-amount"></span>
+                <span class="base-currency"></span>
+                <span class="final-result"></span>
+                <span class="second-currency"></span>
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
+                            <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
+                            <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>
+                            <li><a href="{% url 'blog' %}"><h6>Blogs</h6></a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/Cryptos-100778582123682"><h6>Facebook</h6></a></li>
+                            <li><a href="https://twitter.com/Cryptos95647385"><h6>Twitter</h6></a></li>
+                            <li><a href="cryptossolution@gmail.com"><h6>Gmail</h6></a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                </div>
+            </div> <!-- end container -->
+        </div>
+
+    </footer> <!-- end footer -->
+
+    <!-- end Footer Area
+    ========================================== -->
+
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+    <!-- Main jQuery -->
+    <script src="{% static 'home/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'home/plugins/bootstrap/dist/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/plugins/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'home/plugins/slick-carousel/slick/slick.min.js' %}"></script>
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <!-- Smooth Scroll js -->
+    <script src="{% static 'home/plugins/smooth-scroll/dist/js/smooth-scroll.min.js' %}"></script>
+
+    <!-- Custom js -->
+    <script src="{% static 'home/js/script.js' %}"></script>
+
+</body>
+
+</html>
