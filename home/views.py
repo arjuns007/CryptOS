@@ -62,12 +62,13 @@ def home(request):
    return render(request, 'home.html', d)
 
 def cal_con(request):
-    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=100&page=1&sparkline=false'
     data = requests.get(url).json()
 
 
 
-    url2 ='https://api.exchangeratesapi.io/latest?base=USD'
+    url2 ='http://api.exchangeratesapi.io/latest?access_key=eb70758538d0f60d66ccf9abe7f9054f'
+    
     data2= requests.get(url2).json()
     rates = data2['rates']
 
@@ -83,7 +84,7 @@ def cal_con(request):
         for item in data:
             if item['symbol'] == curr1.lower():
                 price = float(item['current_price'])
-                if curr2 == 'USD':
+                if curr2 == 'EUR':
                     Result = round(value1*price,2)
                 else:
                     Result = round(value1*price*rates[curr2],2)                  
