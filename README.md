@@ -2,6 +2,25 @@
 We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information! Here you can find each and every detailed information of any Crypto,the right guide to invest for newbies and almost everything you need about CrytoCurrency!
 PS- All the data about CryptoCurrency is real-time so that you get the latest insights in a very minimal time and at a faster pace!
 
+<div align="center">
+
+
+ 
+  [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+
+
+</div>
+
+## 🎉 Badges <a name = "badges"></a>
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/Naereen/)
+[![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)
+
+
+
 ![Screenshot 2021-05-04 at 1 05 19 AM](https://user-images.githubusercontent.com/44583018/116924481-8eb04580-ac75-11eb-89aa-95435249ba7f.png)
 ![Screenshot 2021-05-04 at 1 05 56 AM](https://user-images.githubusercontent.com/44583018/116924486-91129f80-ac75-11eb-8a19-5340669ffc0d.png)
 ![Screenshot 2021-05-04 at 1 06 05 AM](https://user-images.githubusercontent.com/44583018/116924491-92dc6300-ac75-11eb-9b1c-56ca42212e0d.png)
