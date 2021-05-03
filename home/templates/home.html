@@ -36,52 +36,31 @@
     <!--
 Fixed Navigation
 ==================================== -->
-<section class="top-header">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="currency-status">
-                    <li>
-                        <a href="#">
-                            <i class= '{{c_btc}}' ></i>
-                            <span>BTC/USD</span>
-                            <span>{{btc}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="{{c_eth}}"></i>
-                            <span>ETH/USD</span>
-                            <span>{{eth}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="{{c_bnb}}"></i>
-                            <span>BNB/USD</span>
-                            <span>{{bnb}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="{{c_usdt}}"></i>
-                            <span>USDT/USD</span>
-                            <span>{{usdt}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="{{c_ada}}"></i>
-                            <span>ADA/USD</span>
-                            <span>{{ada}}</span>
-                        </a>
-                    </li>
-                   
-                </ul>
+    <section class="top-header">
+        <div class="container-fluid">
+            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
+                <div class="col-md-12">
+                    
+                    <ul class="currency-status">
+                    {% if top_bar %}
+                        {% for obj in top_bar %}   
+                            <li>
+                                <a href="#">
+                                    <i class= '{{obj.class}}' ></i>
+                                    <span>{{obj.sym}}/USD</span>
+                                    <span>{{obj.curr_p}}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif  %}    
+                                               
+                    </ul>
+                    
+                </div>
             </div>
+        </marquee>
         </div>
-    </div>
-</section>
+    </section>
     <section class="header  navigation">
         <div class="container">
             <div class="row">
@@ -183,6 +162,7 @@ Fixed Navigation
                     <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
                         <h2>Quick Links</h2>
                         <ul>
+                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
                             <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
                             <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
                             <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>

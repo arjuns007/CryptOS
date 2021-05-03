@@ -1,244 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="zxx">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-        {% load static %}
-        <!DOCTYPE html>
-        
-        <html lang="zxx">
-        <!--<![endif]-->
-        
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        
-            <title>CRYPTOS</title>
-        
-            <!-- Mobile Specific Meta
+    <title>CRYPTOS</title>
+
+    <!-- Mobile Specific Meta
           ================================================== -->
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-            <!-- CSS
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
           ================================================== -->
-            <!-- Themefisher Icon font -->
-            <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
-            <!-- bootstrap.min css -->
-            <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
-            <!-- Slick Carousel -->
-            <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
-            <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
-            <!-- Main Stylesheet -->
-            <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-        
-        
-        
-        </head>
-        
-        <body id="body">
-        
-        
-            <!--
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+
+
+</head>
+
+<body id="body">
+
+
+    <!--
         Fixed Navigation
         ==================================== -->
-            <section class="top-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="currency-status">
-                                <li>
-                                    <a href="#">
-                                        <i class='{{c_btc}}'></i>
-                                        <span>BTC/USD</span>
-                                        <span>{{btc}}</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="{{c_eth}}"></i>
-                                        <span>ETH/USD</span>
-                                        <span>{{eth}}</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="{{c_bnb}}"></i>
-                                        <span>BNB/USD</span>
-                                        <span>{{bnb}}</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="{{c_usdt}}"></i>
-                                        <span>USDT/USD</span>
-                                        <span>{{usdt}}</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="{{c_ada}}"></i>
-                                        <span>ADA/USD</span>
-                                        <span>{{ada}}</span>
-                                    </a>
-                                </li>
-        
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="header  navigation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <nav class="navbar navbar-expand-lg">
-                                <a class="navbar-brand" href="{% url 'home' %}">
-                                    <img src="{% static 'home/images/logo.png' %}" alt="logo">
+    <section class="top-header">
+        <div class="container-fluid">
+            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
+                <div class="col-md-12">
+                    
+                    <ul class="currency-status">
+                    {% if top_bar %}
+                        {% for obj in top_bar %}   
+                            <li>
+                                <a href="#">
+                                    <i class= '{{obj.class}}' ></i>
+                                    <span>{{obj.sym}}/USD</span>
+                                    <span>{{obj.curr_p}}</span>
                                 </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="tf-ion-android-menu"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="{% url 'home' %}">Home <span
-                                                    class="sr-only">(current)</span></a>
-                                        </li>
-                                        <!-- <li class="nav-item">
+                            </li>
+                        {% endfor %}
+                    {% endif  %}    
+                                               
+                    </ul>
+                    
+                </div>
+            </div>
+        </marquee>
+        </div>
+    </section>
+    <section class="header  navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{% url 'home' %}">
+                            <img src="{% static 'home/images/logo.png' %}" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="tf-ion-android-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <!-- <li class="nav-item">
                                             <a class="nav-link" href="exchange.html">Exchange</a>
                                         </li> -->
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'guide' %}">Guide</a>
-                                        </li>
-        
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-        
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'guide' %}">Guide</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                            </ul>
                         </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page-wrapper section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Our guide</h2>
+                    <p>Complete guide to crycptocurrency exchange.</p>
+                    <p>We help you find what you're looking for. For more information you can mail us at: </p>
+                    <p style="color: black;">cryptossolution@gmail.com</p>
+                </div>
+                <div class="col-md-8">
+                    <h4>How to Buy Bitcoin and Other Cryptocurrencies</h4>
+                    <p>We understand that it can be difficult and confusing for new users to take their first steps into
+                        the world of Bitcoin,
+                        blockchain and cryptocurrencies. CoinMarketCap is here to help! We’ve collected information from
+                        over 300 cryptocurrency
+                        exchanges globally and through that data, prepared a quick guide to help you choose the best
+                        crypto exchange so you can
+                        finally buy your first Bitcoin!</p>
+                    <p>The options available to purchase Bitcoins and other assets do differ from one country to
+                        another due to the laws that exchanges operate under. The options to buy Bitcoin with credit
+                        cards, debit cards or transfers
+                        from a bank account also differ from country to country and between exchanges. Here at
+                        CoinMarketCap, we are here to help
+                        guide you through those options.</p>
+                    <h4>Choosing the Best Bitcoin Exchange</h4>
+                    <p>The very first step involves choosing an exchange or trading platform that supports the deposit
+                        and withdrawal of your local fiat
+                        currency. Many exchanges are localized and only support a select number of currencies. This page
+                        allows you to see which exchanges
+                        support your currency of choice. Using our extensively collected data from all exchanges, we are
+                        able to rank these exchanges based
+                        on volume, liquidity (how easy it is to buy and sell Bitcoin) and each exchange’s estimated
+                        number of users. We hope this ranking
+                        can help you better decide where you would like to buy your first Bitcoin!</p>
+                    <p>You can also check if exchanges are licensed and regulated, the different deposit and withdrawal
+                        methods they support, their fees
+                        and trading commissions and their Bitcoin price. We have conveniently displayed all the
+                        information for you to make your decision
+                        on just one page. These subjects might sound a little mundane, but it is important to remember
+                        that a crypto exchange has to
+                        operate under similar rules to a stockbroker. This means that they have very high standards for
+                        documentation to comply with
+                        the local laws. Certain exchanges might not be a good fit for you because of the country you are
+                        from and it is helpful to know
+                        that in advance, so that you can choose the best place to buy Bitcoin and crypto for your own
+                        situation.</p>
+                    <h4>Understanding the Different Payment Methods Available</h4>
+                    <p>There are four main methods of depositing local currencies on a crypto exchange. They are:</p>
+                    <div style="margin-left: 40px">
+                        <ol style="list-style-type: decimal; color:#554c4c">
+                            <li>Local bank transfers</li>
+                            <li>International wire transfers</li>
+                            <li>Third party payment processors</li>
+                            <li>Credit/debit cards</li>
+                        </ol><br>
                     </div>
+                    <p>For the first several years, it was not possible to buy Bitcoin or any of the other early
+                        cryptocurrencies with a credit card, debit card,
+                        or with third party payment processors like PayPal, because it is possible to reverse those
+                        transactions. Since a blockchain transfer cannot
+                        be reversed, it would have been possible to pay, receive the crypto, transfer it off the
+                        exchange and then reverse the payment. This meant
+                        that for years, the price of BTC and all crypto was supported by real money with no borrowing.
+                        Therefore, until quite recently, it was only
+                        possible to get Bitcoins from an exchange with either a local bank transfer or a wire transfer.
+                    </p>
+
                 </div>
-            </section>
-        
-        
-            <section class="page-wrapper section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h2>Our guide</h2>
-                            <p>Complete guide to crycptocurrency exchange.</p> 
-                            <p>We help you find what you're looking for. For more information you can mail us at: </p>
-                            <p style="color: black;">cryptossolution@gmail.com</p>
-                        </div>
-                        <div class="col-md-8">
-                            <h4>How to Buy Bitcoin and Other Cryptocurrencies</h4>
-                            <p>We understand that it can be difficult and confusing for new users to take their first steps into the world of Bitcoin, 
-                                    blockchain and cryptocurrencies. CoinMarketCap is here to help! We’ve collected information from over 300 cryptocurrency 
-                                    exchanges globally and through that data, prepared a quick guide to help you choose the best crypto exchange so you can 
-                                    finally buy your first Bitcoin!</p> 
-                            <p>The options available to purchase Bitcoins and other assets do differ from one country to 
-                                    another due to the laws that exchanges operate under. The options to buy Bitcoin with credit cards, debit cards or transfers 
-                                    from a bank account also differ from country to country and between exchanges. Here at CoinMarketCap, we are here to help 
-                                    guide you through those options.</p>
-                            <h4>Choosing the Best Bitcoin Exchange</h4>
-                            <p>The very first step involves choosing an exchange or trading platform that supports the deposit and withdrawal of your local fiat 
-                                currency. Many exchanges are localized and only support a select number of currencies. This page allows you to see which exchanges 
-                                support your currency of choice. Using our extensively collected data from all exchanges, we are able to rank these exchanges based 
-                                on volume, liquidity (how easy it is to buy and sell Bitcoin) and each exchange’s estimated number of users. We hope this ranking 
-                                can help you better decide where you would like to buy your first Bitcoin!</p> 
-                            <p>You can also check if exchanges are licensed and regulated, the different deposit and withdrawal methods they support, their fees 
-                                and trading commissions and their Bitcoin price. We have conveniently displayed all the information for you to make your decision
-                                 on just one page. These subjects might sound a little mundane, but it is important to remember that a crypto exchange has to 
-                                 operate under similar rules to a stockbroker. This means that they have very high standards for documentation to comply with 
-                                 the local laws. Certain exchanges might not be a good fit for you because of the country you are from and it is helpful to know 
-                                 that in advance, so that you can choose the best place to buy Bitcoin and crypto for your own situation.</p>
-                            <h4>Understanding the Different Payment Methods Available</h4>
-                            <p>There are four main methods of depositing local currencies on a crypto exchange. They are:</p>
-                            <div style="margin-left: 40px">
-                                <ol style="list-style-type: decimal; color:#554c4c">
-                                    <li>Local bank transfers</li>
-                                    <li>International wire transfers</li>
-                                    <li>Third party payment processors</li>
-                                    <li>Credit/debit cards</li>
-                                </ol><br>
-                            </div>
-                            <p>For the first several years, it was not possible to buy Bitcoin or any of the other early cryptocurrencies with a credit card, debit card,
-                            or with third party payment processors like PayPal, because it is possible to reverse those transactions. Since a blockchain transfer cannot 
-                            be reversed, it would have been possible to pay, receive the crypto, transfer it off the exchange and then reverse the payment. This meant 
-                            that for years, the price of BTC and all crypto was supported by real money with no borrowing. Therefore, until quite recently, it was only 
-                            possible to get Bitcoins from an exchange with either a local bank transfer or a wire transfer.</p> 
-                            
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
+                            <li><a href="{% url 'cal_con' %}">
+                                    <h6>Cryptocurrency Converter</h6>
+                                </a></li>
+                            <li><a href="{% url 'about' %}">
+                                    <h6>About</h6>
+                                </a></li>
+                            <li><a href="{% url 'faq' %}">
+                                    <h6>FAQ's</h6>
+                                </a></li>
+                            <li><a href="{% url 'blog' %}">
+                                    <h6>Blogs</h6>
+                                </a></li>
+                        </ul>
                     </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/Cryptos-100778582123682">
+                                    <h6>Facebook</h6>
+                                </a></li>
+                            <li><a href="https://twitter.com/Cryptos95647385">
+                                    <h6>Twitter</h6>
+                                </a></li>
+                            <li><a href="cryptossolution@gmail.com">
+                                    <h6>Gmail</h6>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
                 </div>
-            </section>
-        
-            <footer id="footer" class="bg-one">
-                <div class="top-footer">
-                    <div class="container">
-                        <div class="row ">
-        
-                            <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
-                                <h2>Quick Links</h2>
-                                <ul>
-                                    <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
-                                    <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
-                                    <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>
-                                    <li><a href="{% url 'blog' %}"><h6>Blogs</h6></a></li>
-                                </ul>
-                            </div>
-                            <!-- End of .col-sm-3 -->
-        
-                            <div class="col-sm-4 col-md-4 col-lg-4">
-                                <h2>Follow Us</h2>
-                                <ul>
-                                    <li><a href="https://www.facebook.com/Cryptos-100778582123682"><h6>Facebook</h6></a></li>
-                                    <li><a href="https://twitter.com/Cryptos95647385"><h6>Twitter</h6></a></li>
-                                    <li><a href="cryptossolution@gmail.com"><h6>Gmail</h6></a></li>
-                                </ul>
-                            </div>
-                            <!-- End of .col-sm-3 -->
-        
-                        </div>
-                    </div> <!-- end container -->
-                </div>
-        
-            </footer> <!-- end footer -->
-        
-            <!-- end Footer Area
+            </div> <!-- end container -->
+        </div>
+
+    </footer> <!-- end footer -->
+
+    <!-- end Footer Area
             ========================================== -->
-        
-        
-        
-            <!-- 
+
+
+
+    <!-- 
             Essential Scripts
             =====================================-->
-        
-            <!-- Main jQuery -->
-            <script src="{% static 'home/plugins/jquery/dist/jquery.min.js' %}"></script>
-            <!-- Bootstrap -->
-            <script src="{% static 'home/plugins/bootstrap/dist/js/popper.min.js' %}"></script>
-            <script src="{% static 'home/plugins/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-            <!-- Owl Carousel -->
-            <script src="{% static 'home/plugins/slick-carousel/slick/slick.min.js' %}"></script>
-            <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
-            <!-- Smooth Scroll js -->
-            <script src="{% static 'home/plugins/smooth-scroll/dist/js/smooth-scroll.min.js' %}"></script>
-        
-            <!-- Custom js -->
-            <script src="{% static 'home/js/script.js' %}"></script>
-        
-        </body>
-        
-        </html>
+
+    <!-- Main jQuery -->
+    <script src="{% static 'home/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'home/plugins/bootstrap/dist/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/plugins/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'home/plugins/slick-carousel/slick/slick.min.js' %}"></script>
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <!-- Smooth Scroll js -->
+    <script src="{% static 'home/plugins/smooth-scroll/dist/js/smooth-scroll.min.js' %}"></script>
+
+    <!-- Custom js -->
+    <script src="{% static 'home/js/script.js' %}"></script>
+
+</body>
+
+</html>

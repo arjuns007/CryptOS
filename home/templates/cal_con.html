@@ -32,54 +32,33 @@
 
 <body id="body">
 
-
+    {% block content %}
     <!--
 Fixed Navigation
 ==================================== -->
     <section class="top-header">
         <div class="container-fluid">
-            <div class="row">
+            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
                 <div class="col-md-12">
+                    
                     <ul class="currency-status">
-                        <li>
-                            <a href="#">
-                                <i class= '{{c_btc}}' ></i>
-                                <span>BTC/USD</span>
-                                <span>{{btc}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_eth}}"></i>
-                                <span>ETH/USD</span>
-                                <span>{{eth}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_bnb}}"></i>
-                                <span>BNB/USD</span>
-                                <span>{{bnb}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_usdt}}"></i>
-                                <span>USDT/USD</span>
-                                <span>{{usdt}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_ada}}"></i>
-                                <span>ADA/USD</span>
-                                <span>{{ada}}</span>
-                            </a>
-                        </li>
-                       
+                    {% if top_bar %}
+                        {% for obj in top_bar %}   
+                            <li>
+                                <a href="#">
+                                    <i class= '{{obj.class}}' ></i>
+                                    <span>{{obj.sym}}/USD</span>
+                                    <span>{{obj.curr_p}}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif  %}    
+                                               
                     </ul>
+                    
                 </div>
             </div>
+        </marquee>
         </div>
     </section>
     <section class="header  navigation">
@@ -137,24 +116,20 @@ Fixed Navigation
             <h2 class="center-row">Cryptocurrency Calculator</h2>
             <p class="lead center-row">Convert the Cryptocurrency</p>
             
+            
             <form action="{% url 'cal_con' %}" method="post">
                 {% csrf_token %}
                 <div class="form-group mb-2">
-                    <input type="number" step="0.01" value="0"  placeholder="Enter Amount to Convert" class="form-control" id="amount" name="value" required />
+                    <input type="number" step="0.01" min="0"  placeholder="Enter Amount to Convert" class="form-control" id="amount" name="value" required />
                 </div>
                 <div class="form-inline">
                     <div class="form-group mx-sm-3 mb-2">
                         <select class="form-control" id="currency-1" name="curr1" required>
-                            <option value="BTC">Bitcoin(BTC)</option>
-                            <option value="ETH">Ethereum(ETH)</option>
-                            <option value="BNB">Binancecoin(BNB)</option>
-                            <option value="USDT">Tether(USDT)</option>
-                            <option value="ADA">Cardano(ADA)</option>
-                            <option value="DOT">Polkadot(DOT)</option>
-                            <option value="XRP">Ripple(XRP)</option>
-                            <option value="UNI">Uniswap(UNI)</option>
-                            <option value="LTC">Litecoin(LTC)</option>
-                            <option value="THETA">Theta Token(THETA)</option>
+                        {% if data %}
+                            {% for obj in data %}
+                                <option value="{{obj.symbol}}">{{obj.name}}({{obj.symbol}})</option>
+                            {% endfor %} 
+                        {% endif %}          
                         </select>
                     </div>
                     
@@ -177,7 +152,8 @@ Fixed Navigation
                     <!-- <button type="reset" class="btn calculate-btn btn-primary mb-2 ">Reset</button> -->
                     <button type="submit" class="btn calculate-btn btn-primary mb-2">Convert</button>
                 </div>
-            </form>    
+            </form>  
+             
  
             
         </div>
@@ -194,7 +170,7 @@ Fixed Navigation
     </div>
     </div>
 
-
+    {% endblock content %}
 
     <footer id="footer" class="bg-one">
         <div class="top-footer">
@@ -204,6 +180,7 @@ Fixed Navigation
                     <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
                         <h2>Quick Links</h2>
                         <ul>
+                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
                             <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
                             <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
                             <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>

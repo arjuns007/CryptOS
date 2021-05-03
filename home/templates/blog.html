@@ -39,48 +39,27 @@ Fixed Navigation
 ==================================== -->
     <section class="top-header">
         <div class="container-fluid">
-            <div class="row">
+            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
                 <div class="col-md-12">
+                    
                     <ul class="currency-status">
-                        <li>
-                            <a href="#">
-                                <i class='{{c_btc}}'></i>
-                                <span>BTC/USD</span>
-                                <span>{{btc}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_eth}}"></i>
-                                <span>ETH/USD</span>
-                                <span>{{eth}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_bnb}}"></i>
-                                <span>BNB/USD</span>
-                                <span>{{bnb}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_usdt}}"></i>
-                                <span>USDT/USD</span>
-                                <span>{{usdt}}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="{{c_ada}}"></i>
-                                <span>ADA/USD</span>
-                                <span>{{ada}}</span>
-                            </a>
-                        </li>
-
+                    {% if top_bar %}
+                        {% for obj in top_bar %}   
+                            <li>
+                                <a href="#">
+                                    <i class= '{{obj.class}}' ></i>
+                                    <span>{{obj.sym}}/USD</span>
+                                    <span>{{obj.curr_p}}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif  %}    
+                                               
                     </ul>
+                    
                 </div>
             </div>
+        </marquee>
         </div>
     </section>
     <section class="header  navigation">
@@ -203,24 +182,27 @@ Fixed Navigation
                 <article class="col-12 col-md-6">
                     <div class="post-item blog-item ">
                         <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post1.jpg' %}"
+                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post3.png' %}"
                                 alt="Generic placeholder image">
                         </div>
                         <div class="post-title blog-title">
-                            <h3 class="mt-0"> <a href="">One BTC will be worth a Lambo by 2022, and a Bugatti by 2023:
-                                    Kraken CEO</a> </h3>
+                            <h3 class="mt-0"> <a href="https://www.coindesk.com/bitcoin-btc-crash-correction">Bitcoin Crash vs. Correction: Do You Know the Difference?</a> </h3>
                         </div>
                         <div class="post-meta">
-                            <span>By</span> <a href="" class="">SAMUEL HAIG</a>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <span>By</span> <a href="" class="">Ollie Leech</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <span> May 1, 2021</span>
+                                </li>
+                            </ul>
+                            
                         </div>
                         <div class="post-content">
-                            <p>Appearing on Bloomberg, Kraken CEO Jesse Powell explained why he believes dollar-based
-                                long-term price predictions for Bitcoin are flawed, emphasizing the inflationary nature
-                                of fiat currencies. Responding to a question asking Powell for end of year price
-                                predictions, Kraken’s CEO said: “I think I said Bitcoin is going to infinity and that’s
-                                kind of hard to comprehend because I’m measuring it in terms of dollars.”</p>
+                            <p>Whether you're a first-time crypto user or a veteran trader, it's easy to get confused over crashes and corrections when both terms are thrown around so frequently.</p>
                         </div>
-                        <a class="btn btn-main" href="#">Read more</a>
+                        <a class="btn btn-main" href="https://www.coindesk.com/bitcoin-btc-crash-correction">Read more</a>
                     </div>
                 </article>
                 <!-- /single blog post -->
@@ -229,30 +211,26 @@ Fixed Navigation
                  <article class="col-12 col-md-6">
                     <div class="post-item">
                         <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post2.jpg' %}"
+                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post4.jpg' %}"
                                 alt="Generic placeholder image">
                         </div>
                         <div class="post-title">
-                            <h3 class="mt-0"> <a href=""> iPhone user blames Apple for $600K Bitcoin theft via fake
-                                    app</a> </h3>
+                            <h3 class="mt-0"> <a href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever"> Ether Breaks Above $3.2K for the First Time Ever</a> </h3>
                         </div>
                         <div class="post-meta">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <span>By</span> <a href="" class="">HELEN PARTZ</a>
+                                    <span>By</span> <a href="" class="">Muyao Shen</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <span>By</span> <span> 31st March 2021</span>
+                                    <span> May 3, 2021</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="post-content">
-                            <p>A scam cryptocurrency app on Apple’s app distribution service App Store has reportedly
-                                stolen $600,000 Bitcoin (BTC) from one iOS user. Cryptocurrency holder Phillipe
-                                Christodoulou fell victim to a scam app on the App Store, losing nearly all his life
-                                savings to a fake crypto wallet application, The Washington Post reports Tuesday.</p>
+                            <p> ETH, the second-largest cryptocurrency by market capitalization, went above $3,200 Monday for the first time in history, according to CoinDesk 20, after setting multiple all-time highs last week.</p>
                         </div>
-                        <a class="btn btn-main" href="#">Read more</a>
+                        <a class="btn btn-main" href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever">Read more</a>
                     </div>
                 </article>
                 <!-- end single blog post -->
@@ -270,6 +248,7 @@ Fixed Navigation
                     <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
                         <h2>Quick Links</h2>
                         <ul>
+                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
                             <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
                             <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
                             <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>

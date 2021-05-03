@@ -17,7 +17,7 @@ def plot_chart(sym):
     candles = client.get_candles(
         'binance',  # exchange
         sym,      # base_trading_symbol
-        'USDT',      # quote_trading_symbol
+        'USDC',      # quote_trading_symbol
         '15m'       # interval
     )
 
@@ -52,61 +52,28 @@ def plot_chart(sym):
 
 def top_bar():
 
-    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=10&page=1&sparkline=false'
     data = requests.get(url).json()
-
+    barlist=[]
     for item in data:
+        sym = item['symbol'].upper()
+        curr_p = float(item['current_price'])
+        c_chng = item['price_change_24h']
+        if c_chng < 0:
+            c_chng = "tf-ion-arrow-down-b down-status"
+        else:
+            c_chng = "tf-arrow-dropup up-status"
 
-            if item['symbol'] == 'btc':
-                btc = float(item['current_price'])
-                c_btc = item['price_change_24h']
-                if c_btc < 0:
-                    c_btc = "tf-ion-arrow-down-b down-status"
-                else:
-                    c_btc = str("tf-arrow-dropup up-status")
+         
+        barlist.append({'sym': sym,'class':c_chng,'curr_p':curr_p }) 
 
-
-            if item['symbol'] == 'eth':
-                eth = float(item['current_price'])
-                c_eth = item['price_change_24h']
-                if c_eth < 0:
-                    c_eth = "tf-ion-arrow-down-b down-status"
-                else:
-                    c_eth = "tf-arrow-dropup up-status"
-
-            
-            if item['symbol'] == 'bnb':
-                bnb = float(item['current_price'])
-                c_bnb = item['price_change_24h']
-                if c_bnb < 0:
-                    c_bnb = "tf-ion-arrow-down-b down-status"
-                else:
-                    c_bnb = "tf-arrow-dropup up-status"
-
-            
-            if item['symbol'] == 'usdt':
-                usdt = float(item['current_price'])
-                c_usdt = item['price_change_24h']
-                if c_usdt < 0:
-                    c_usdt = "tf-ion-arrow-down-b down-status"
-                else:
-                    c_usdt = "tf-arrow-dropup up-status"
-
-
-            if item['symbol'] == 'ada':
-                ada = float(item['current_price'])
-                c_ada = item['price_change_24h']
-                if c_ada < 0:
-                    c_ada = "tf-ion-arrow-down-b down-status"
-                else:
-                    c_ada = "tf-arrow-dropup up-status"
-
-    return {'btc':btc,'eth':eth,'bnb':bnb,'usdt':usdt,'ada':ada,'c_ada': c_ada,'c_bnb': c_bnb,'c_btc': c_btc,'c_eth' : c_eth,'c_usdt' : c_usdt}
+    context = {'top_bar': barlist}
+    return context
 
 
 
 def cal_con(request):
-    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=15&page=1&sparkline=false'
     data = requests.get(url).json()
 
 
@@ -115,8 +82,9 @@ def cal_con(request):
     
     data2= requests.get(url2).json()
     rates = data2['rates']
-
-    d = top_bar()           
+    context = {'data':data}
+    d = top_bar()   
+    context.update(d)        
    
 
     if request.method == 'POST':
@@ -126,22 +94,22 @@ def cal_con(request):
         
 
         for item in data:
-            if item['symbol'] == curr1.lower():
+            if item['symbol'] == curr1:
                 price = float(item['current_price'])
                 if curr2 == 'EUR':
                     Result = "{:,}".format(round(value1*price,2))
                 else:
                     Result = "{:,}".format(round(value1*price*rates[curr2],2) )                 
         
-        k= {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1,'curr2': curr2}
+        k= {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1.upper(),'curr2': curr2}
         
         
-        k.update(d)
-        return render(request, 'cal_con.html', k)
+        context.update(k)
+        return render(request, 'cal_con.html', context)
 
     
     else:
-        return render(request, 'cal_con.html', d)
+        return render(request, 'cal_con.html', context)
 
 
 def about(request):
