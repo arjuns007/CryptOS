@@ -26,7 +26,7 @@ beautifulsoup4==4.9.1
 billiard==3.6.3.0
 bitarray @ file:///opt/concourse/worker/volumes/live/9034c98d-f3e3-4444-48f0-092269ed9919/volume/bitarray_1594753940633/work
 bkcharts==0.2
-bleach==3.1.5
+bleach==3.3.0
 bokeh @ file:///opt/concourse/worker/volumes/live/eb4a1f42-db74-4fc3-7f34-0189ef49c1a1/volume/bokeh_1593187606262/work
 boto==2.49.0
 Bottleneck==1.3.2
