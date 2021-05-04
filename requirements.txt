@@ -180,7 +180,7 @@ pycurl==7.43.0.5
 PyDispatcher==2.0.5
 pydocstyle @ file:///tmp/build/80754af9/pydocstyle_1592848020240/work
 pyflakes==2.2.0
-Pygments==2.6.1
+Pygments==2.7.4
 PyHamcrest==2.0.2
 pylint @ file:///opt/concourse/worker/volumes/live/0a2a544e-806a-4267-74b2-a3f95578c3f2/volume/pylint_1592498630326/work
 pyodbc===4.0.0-unsupported
