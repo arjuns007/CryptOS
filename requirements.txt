@@ -61,7 +61,7 @@ diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/wor
 distlib==0.3.1
 distributed @ file:///opt/concourse/worker/volumes/live/ec098701-cad7-4317-4576-0365c5f66992/volume/distributed_1594350140096/work
 dj-database-url==0.5.0
-Django==3.1.8
+Django==3.1.9
 django-heroku==0.3.1
 docopt==0.6.2
 docutils==0.16
