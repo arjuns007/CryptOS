@@ -136,7 +136,7 @@ nbformat==5.0.7
 networkx @ file:///tmp/build/80754af9/networkx_1594377231366/work
 nltk==3.6.1
 nose @ file:///opt/concourse/worker/volumes/live/a029938e-1732-4cd8-5b98-0542283d158b/volume/nose_1594377915100/work
-notebook==6.1.5
+notebook==6.4.1
 numba==0.50.1
 numexpr==2.7.1
 numpy==1.18.5
