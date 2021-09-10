@@ -234,7 +234,7 @@ sphinxcontrib-websupport @ file:///tmp/build/80754af9/sphinxcontrib-websupport_1
 spyder @ file:///opt/concourse/worker/volumes/live/0e97f897-b36b-4f78-7283-e99903208a48/volume/spyder_1594831780108/work
 spyder-kernels @ file:///opt/concourse/worker/volumes/live/682c8d56-759f-49eb-7914-dbce4a625209/volume/spyder-kernels_1594751614984/work
 SQLAlchemy @ file:///opt/concourse/worker/volumes/live/45657106-f60d-42e1-6501-7d65be3b36ab/volume/sqlalchemy_1593446313078/work
-sqlparse==0.4.1
+sqlparse==0.4.2
 stanfordnlp==0.2.0
 statsmodels==0.11.1
 stemgraphic==0.9.0
