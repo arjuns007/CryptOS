@@ -2,276 +2,308 @@
 <!DOCTYPE html>
 
 <html lang="zxx">
-<!--<![endif]-->
+  <!--<![endif]-->
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <title>CRYPTOS</title>
 
     <!-- Mobile Specific Meta
   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- CSS
   ================================================== -->
     <!-- Themefisher Icon font -->
-    <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}"
+    />
     <!-- bootstrap.min css -->
-    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.css' %}"
+    />
     <!-- Slick Carousel -->
-    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
-    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  </head>
 
-
-
-</head>
-
-<body id="body">
-
-
-    <!--
+  <body id="body">
+   <!--
 Fixed Navigation
 ==================================== -->
+<section class="top-header">
+  <div class="container-fluid">
+      <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
+          <div class="col-md-12">
+              
+              <ul class="currency-status">
+              {% if top_bar %}
+                  {% for obj in top_bar %}   
+                      <li>
+                          <a href="#">
+                              <i class= '{{obj.class}}' ></i>
+                              <span>{{obj.sym}}/USD</span>
+                              <span>{{obj.curr_p}}</span>
+                          </a>
+                      </li>
+                  {% endfor %}
+              {% endif  %}    
+                                         
+              </ul>
+              
+          </div>
+      </div>
+  </marquee>
+  </div>
+</section>
+<section class="header  navigation">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <nav class="navbar navbar-expand-lg">
+                  <a class="navbar-brand" href="{% url 'home' %}">
+                      <img src="{% static 'home/images/logo.png' %}" alt="logo">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="tf-ion-android-menu"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="{% url 'home' %}">Home <span
+                                      class="sr-only">(current)</span></a>
+                          </li>
+                          <!-- <li class="nav-item">
+                              <a class="nav-link" href="exchange.html">Exchange</a>
+                          </li> -->
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'guide' %}">Guide</a>
+                          </li>
 
-    <section class="top-header">
-        <div class="container-fluid">
-            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
-                <div class="col-md-12">
-                    
-                    <ul class="currency-status">
-                    {% if top_bar %}
-                        {% for obj in top_bar %}   
-                            <li>
-                                <a href="#">
-                                    <i class= '{{obj.class}}' ></i>
-                                    <span>{{obj.sym}}/USD</span>
-                                    <span>{{obj.curr_p}}</span>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    {% endif  %}    
-                                               
-                    </ul>
-                    
-                </div>
-            </div>
-        </marquee>
-        </div>
-    </section>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
 
-    <section class="header  navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="{% url 'home' %}">
-                            <img src="{% static 'home/images/logo.png' %}" alt="logo">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="tf-ion-android-menu"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'home' %}">Home <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="exchange.html">Exchange</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'guide' %}">Guide</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
+          </div>
+      </div>
+  </div>
+</section> 
 
     <!-- Start Our Team
 		=========================================== -->
     <section class="team section" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="title text-center">
-                        <h4>TEAM MEMBERS</h4>
-                        <h2>Our Team.</h2>
-                        <span class="border"></span>
-                        <p>Meet our talented team of developers who made this website sucessful!</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="title text-center">
+              <h4>TEAM MEMBERS</h4>
+              <h2>Our Team.</h2>
+              <span class="border"></span>
+              <p>
+                Meet our talented team of developers who made this website
+                sucessful!
+              </p>
             </div>
-            <div class="row">
-                <!-- team member -->
-                <div class="col-12 col-md-4 col-sm-6">
-                    <div class="team-member text-center">
-                        <div class="member-photo">
-                            <!-- member photo -->
-                            <img class="img-fluid" src="{% static 'home/images/team/member1.jpg' %}" alt="team people">
-                            <!-- /member photo -->
-                        </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- team member -->
+          <div class="col-12 col-md-4 col-sm-6">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <!-- member photo -->
+                <img
+                  class="img-fluid"
+                  src="{% static 'home/images/team/member1.jpg' %}"
+                  alt="team people"
+                />
+                <!-- /member photo -->
+              </div>
 
-                        <!-- member name & designation -->
-                        <div class="member-content">
-                            <h3>Aman Mehra</h3>
+              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Aman Mehra</h3>
+              </div>
+              <!-- /member name & designation -->
+            </div>
+          </div>
+          <!-- end team member -->
 
-                        </div>
-                        <!-- /member name & designation -->
+          <!-- team member -->
+          <div class="col-12 col-md-4 col-sm-6">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <!-- member photo -->
+                <img
+                  class="img-fluid"
+                  src="{% static 'home/images/team/member2.jpg' %}"
+                  alt="team people"
+                />
+                <!-- /member photo -->
+              </div>
 
-                    </div>
-                </div>
-                <!-- end team member -->
+              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Arjun Seth</h3>
+              </div>
+              <!-- /member name & designation -->
+            </div>
+          </div>
+          <!-- end team member -->
+          <!-- team member -->
+          <div class="col-12 col-md-4 col-sm-6">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <!-- member photo -->
+                <img
+                  class="img-fluid"
+                  src="{% static 'home/images/team/member4.jpg' %}"
+                  alt="team people"
+                />
+                <!-- /member photo -->
+              </div>
 
-                <!-- team member -->
-                <div class="col-12 col-md-4 col-sm-6">
-                    <div class="team-member text-center">
-                        <div class="member-photo">
-                            <!-- member photo -->
-                            <img class="img-fluid" src="{% static 'home/images/team/member2.jpg' %}" alt="team people">
-                            <!-- /member photo -->
-                        </div>
+              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Divtej Singh Bindra</h3>
+              </div>
+              <!-- /member name & designation -->
+            </div>
+          </div>
+          <!-- end team member -->
 
-                        <!-- member name & designation -->
-                        <div class="member-content">
-                            <h3>Arjun Seth</h3>
+          <!-- team member -->
+          <div class="col-12 col-md-4 col-sm-6 offset-md-2">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <!-- member photo -->
+                <img
+                  class="img-fluid"
+                  src="{% static 'home/images/team/member3.jpg' %}"
+                  alt="team people"
+                />
+                <!-- /member photo -->
+              </div>
 
-                        </div>
-                        <!-- /member name & designation -->
-                    </div>
-                </div>
-                <!-- end team member -->
-                <!-- team member -->
-                <div class="col-12 col-md-4 col-sm-6 ">
-                    <div class="team-member text-center">
-                        <div class="member-photo">
-                            <!-- member photo -->
-                            <img class="img-fluid" src="{% static 'home/images/team/member4.jpg' %}" alt="team people">
-                            <!-- /member photo -->
-                        </div>
+              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Mayank Gubba</h3>
+              </div>
+              <!-- /member name & designation -->
+            </div>
+          </div>
+          <!-- end team member -->
 
-                        <!-- member name & designation -->
-                        <div class="member-content">
-                            <h3>Divtej Singh Bindra</h3>
+          <!-- team member -->
+          <div class="col-12 col-md-4 col-sm-6">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <!-- member photo -->
+                <img
+                  class="img-fluid"
+                  src="{% static 'home/images/team/member5.jpg' %}"
+                  alt="team people"
+                />
+                <!-- /member photo -->
+              </div>
 
-                        </div>
-                        <!-- /member name & designation -->
-
-                    </div>
-                </div>
-                <!-- end team member -->
-
-
-                <!-- team member -->
-                <div class="col-12 col-md-4 col-sm-6 offset-md-2">
-                    <div class="team-member text-center">
-                        <div class="member-photo">
-                            <!-- member photo -->
-                            <img class="img-fluid" src="{% static 'home/images/team/member3.jpg' %}" alt="team people">
-                            <!-- /member photo -->
-
-                        </div>
-
-                        <!-- member name & designation -->
-                        <div class="member-content">
-                            <h3>Mayank Gubba</h3>
-
-                        </div>
-                        <!-- /member name & designation -->
-
-                    </div>
-                </div>
-                <!-- end team member -->
-
-                <!-- team member -->
-                <div class="col-12 col-md-4 col-sm-6">
-                    <div class="team-member text-center">
-                        <div class="member-photo">
-                            <!-- member photo -->
-                            <img class="img-fluid" src="{% static 'home/images/team/member5.jpg' %}" alt="team people">
-                            <!-- /member photo -->
-                        </div>
-
-                        <!-- member name & designation -->
-                        <div class="member-content">
-                            <h3>Akshat</h3>
-
-                        </div>
-                        <!-- /member name & designation -->
-                    </div>
-                </div>
-                <!-- end team member -->
-
-            </div> <!-- End row -->
-        </div> <!-- End container -->
-    </section> <!-- End section -->
-
+              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Akshat</h3>
+              </div>
+              <!-- /member name & designation -->
+            </div>
+          </div>
+          <!-- end team member -->
+        </div>
+        <!-- End row -->
+      </div>
+      <!-- End container -->
+    </section>
+    <!-- End section -->
 
     <footer id="footer" class="bg-one">
-        <div class="top-footer">
-            <div class="container">
-                <div class="row ">
+      <div class="top-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
+              <h2>Quick Links</h2>
+              <ul>
+                <li>
+                  <a href="{% url 'cal_con' %}"
+                    ><h6>Cryptocurrency Converter</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'about' %}"><h6>About</h6></a>
+                </li>
+                <li>
+                  <a href="{% url 'faq' %}"><h6>FAQ's</h6></a>
+                </li>
+                <li>
+                  <a href="{% url 'blog' %}"><h6>Blogs</h6></a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of .col-sm-3 -->
 
-                    <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
-                        <h2>Quick Links</h2>
-                        <ul>
-                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
-                            <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
-                            <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
-                            <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>
-                            <li><a href="{% url 'blog' %}"><h6>Blogs</h6></a></li>
-                        </ul>
-                    </div>
-                    <!-- End of .col-sm-3 -->
-
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <h2>Follow Us</h2>
-                        <ul>
-                            <li><a href="https://www.facebook.com/Cryptos-100778582123682"><h6>Facebook</h6></a></li>
-                            <li><a href="https://twitter.com/Cryptos95647385"><h6>Twitter</h6></a></li>
-                            <li><a href="cryptossolution@gmail.com"><h6>Gmail</h6></a></li>
-                        </ul>
-                    </div>
-                    <!-- End of .col-sm-3 -->
-
-                </div>
-            </div> <!-- end container -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <h2>Follow Us</h2>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/Cryptos-100778582123682"
+                    ><h6>Facebook</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="https://twitter.com/Cryptos95647385"
+                    ><h6>Twitter</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="cryptossolution@gmail.com"><h6>Gmail</h6></a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of .col-sm-3 -->
+          </div>
         </div>
-
-    </footer> <!-- end footer -->
-
+        <!-- end container -->
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <!-- end Footer Area
     ========================================== -->
-
-
 
     <!-- 
     Essential Scripts
@@ -291,6 +323,23 @@ Fixed Navigation
     <!-- Custom js -->
     <script src="{% static 'home/js/script.js' %}"></script>
 
-</body>
-
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "97a2d113-169f-4122-812c-67c0c00f2677", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "4540dbcc-c890-4ee6-938f-2fe37c89e5e0", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
 </html>

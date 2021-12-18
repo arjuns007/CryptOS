@@ -58,10 +58,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
 }
-
-.form-control{
-  font-size: 20px;
-}
 .user-select-none {
   height: 800px;
 }
@@ -696,7 +692,7 @@ a:focus, a:hover {
 
 .top-header::-webkit-scrollbar-thumb {
   background-color: #252d34;
-  outline: 5px solid #fff;
+  outline: 2px solid #fff;
 }
 
 .currency-status {
@@ -759,20 +755,18 @@ a:focus, a:hover {
 }
 .converter p{
   font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .converter form input{
   padding: 4px 20px;
-  width: 280px;
+  width: 250px;
   margin-left: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .converter form select{
 padding: 4px 20px;
-width: 280px !important;
-
+width: 250px !important;
 
 }
 .converter form label{
@@ -784,9 +778,8 @@ width: 280px !important;
 }
 
 .converter button{
-  margin: 10px 15px;
-  width: 100px;
-  font-size: 20px;
+  margin: 0 15px;
+  width: 80px;
 }
 
 /*=================================================================
@@ -884,7 +877,7 @@ width: 280px !important;
 }
 
 .post-item .post-thumb img {
-  height: 350px;
+  height: auto;
   width: 100%;
 }
 

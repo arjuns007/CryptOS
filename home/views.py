@@ -17,7 +17,7 @@ def plot_chart(sym):
     candles = client.get_candles(
         'binance',  # exchange
         sym,      # base_trading_symbol
-        'USDC',      # quote_trading_symbol
+        'USDT',      # quote_trading_symbol
         '15m'       # interval
     )
 
@@ -70,21 +70,19 @@ def top_bar():
     context = {'top_bar': barlist}
     return context
 
-
-
 def cal_con(request):
-    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=15&page=1&sparkline=false'
-    data = requests.get(url).json()
-
+    url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=10&page=1&sparkline=false'
+    data = requests.get(url).json()    
+    cryptolist = {'data': data }  
 
 
     url2 ='http://api.exchangeratesapi.io/latest?access_key=eb70758538d0f60d66ccf9abe7f9054f'
     
     data2= requests.get(url2).json()
     rates = data2['rates']
-    context = {'data':data}
-    d = top_bar()   
-    context.update(d)        
+
+    d = top_bar() 
+    d.update(cryptolist)          
    
 
     if request.method == 'POST':
@@ -94,22 +92,22 @@ def cal_con(request):
         
 
         for item in data:
-            if item['symbol'] == curr1:
+            if item['symbol'] == curr1.lower():
                 price = float(item['current_price'])
                 if curr2 == 'EUR':
                     Result = "{:,}".format(round(value1*price,2))
                 else:
                     Result = "{:,}".format(round(value1*price*rates[curr2],2) )                 
         
-        k= {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1.upper(),'curr2': curr2}
+        k= {'Result': str('= ' + str(Result)),'value':value1,'curr1':curr1,'curr2': curr2}
         
+        d.update(k)
         
-        context.update(k)
-        return render(request, 'cal_con.html', context)
+        return render(request, 'cal_con.html', d)
 
     
     else:
-        return render(request, 'cal_con.html', context)
+        return render(request, 'cal_con.html', d)
 
 
 def about(request):

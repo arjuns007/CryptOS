@@ -2,280 +2,364 @@
 <!DOCTYPE html>
 
 <html lang="zxx">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <title>CRYPTOS</title>
 
     <!-- Mobile Specific Meta
   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- CSS
   ================================================== -->
     <!-- Themefisher Icon font -->
-    <link rel="stylesheet" href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/themefisher-font.v-2/style.css' %}"
+    />
     <!-- bootstrap.min css -->
-    <link rel="stylesheet" href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/bootstrap/dist/css/bootstrap.min.css' %}"
+    />
     <!-- Slick Carousel -->
-    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}">
-    <link rel="stylesheet" href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/slick-carousel/slick/slick.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'home/plugins/slick-carousel/slick/slick-theme.css' %}"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  </head>
 
-
-
-</head>
-
-<body id="body">
-
-
-
+  <body id="body">
     <!--
 Fixed Navigation
 ==================================== -->
     <section class="top-header">
-        <div class="container-fluid">
-            <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
-                <div class="col-md-12">
-                    
-                    <ul class="currency-status">
-                    {% if top_bar %}
-                        {% for obj in top_bar %}   
-                            <li>
-                                <a href="#">
-                                    <i class= '{{obj.class}}' ></i>
-                                    <span>{{obj.sym}}/USD</span>
-                                    <span>{{obj.curr_p}}</span>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    {% endif  %}    
-                                               
-                    </ul>
-                    
-                </div>
+      <div class="container-fluid">
+        <marquee onmouseover="this.stop();" onmouseout="this.start();"
+          ><div class="row">
+            <div class="col-md-12">
+              <ul class="currency-status">
+                {% if top_bar %} {% for obj in top_bar %}
+                <li>
+                  <a href="#">
+                    <i class="{{obj.class}}"></i>
+                    <span>{{obj.sym}}/USD</span>
+                    <span>{{obj.curr_p}}</span>
+                  </a>
+                </li>
+                {% endfor %} {% endif %}
+              </ul>
             </div>
+          </div>
         </marquee>
-        </div>
+      </div>
     </section>
-    <section class="header  navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="{% url 'home' %}">
-                            <img src="{% static 'home/images/logo.png' %}" alt="logo">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="tf-ion-android-menu"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'home' %}">Home <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <!-- <li class="nav-item">
+    <section class="header navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'home/images/logo.png' %}" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="tf-ion-android-menu"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}"
+                      >Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <!-- <li class="nav-item">
                                     <a class="nav-link" href="exchange.html">Exchange</a>
                                 </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'guide' %}">Guide</a>
-                                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cal_con' %}"
+                      >Cryptocurrency Converter</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'guide' %}">Guide</a>
+                  </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="blog section" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="title text-center">
-                        <h2>Cryptocurrency Blogs for you</h2>
-                        <span class="border"></span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="title text-center">
+              <h2>Cryptocurrency Blogs for you</h2>
+              <span class="border"></span>
             </div>
-            <div class="row">
-                <!-- single blog post -->
-                <article class="col-12 col-md-6">
-                    <div class="post-item blog-item ">
-                        <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post1.jpg' %}"
-                                alt="Generic placeholder image">
-                        </div>
-                        <div class="post-title blog-title">
-                            <h3 class="mt-0"> <a href="">One BTC will be worth a Lambo by 2022, and a Bugatti by 2023:
-                                    Kraken CEO</a> </h3>
-                        </div>
-                        <div class="post-meta">
-                            <span>By</span> <a href="" class="">SAMUEL HAIG</a>
-                        </div>
-                        <div class="post-content">
-                            <p>Appearing on Bloomberg, Kraken CEO Jesse Powell explained why he believes dollar-based
-                                long-term price predictions for Bitcoin are flawed, emphasizing the inflationary nature
-                                of fiat currencies. Responding to a question asking Powell for end of year price
-                                predictions, Kraken’s CEO said: “I think I said Bitcoin is going to infinity and that’s
-                                kind of hard to comprehend because I’m measuring it in terms of dollars.”</p>
-                        </div>
-                        <a class="btn btn-main" href="#">Read more</a>
-                    </div>
-                </article>
-                <!-- /single blog post -->
+          </div>
+        </div>
+        <div class="row">
+          <!-- single blog post -->
+          <article class="col-12 col-md-6">
+            <div class="post-item blog-item">
+              <div class="post-thumb">
+                <img
+                  class="img-fluid shadow rounded"
+                  src="{% static 'home/images/post1.jpg' %}"
+                  alt="Generic placeholder image"
+                />
+              </div>
+              <div class="post-title blog-title">
+                <h3 class="mt-0">
+                  <a href=""
+                    >One BTC will be worth a Lambo by 2022, and a Bugatti by
+                    2023: Kraken CEO</a
+                  >
+                </h3>
+              </div>
+              <div class="post-meta">
+                <span>By</span> <a href="" class="">SAMUEL HAIG</a>
+              </div>
+              <div class="post-content">
+                <p>
+                  Appearing on Bloomberg, Kraken CEO Jesse Powell explained why
+                  he believes dollar-based long-term price predictions for
+                  Bitcoin are flawed, emphasizing the inflationary nature of
+                  fiat currencies. Responding to a question asking Powell for
+                  end of year price predictions, Kraken’s CEO said: “I think I
+                  said Bitcoin is going to infinity and that’s kind of hard to
+                  comprehend because I’m measuring it in terms of dollars.”
+                </p>
+              </div>
+              <a class="btn btn-main" href="#">Read more</a>
+            </div>
+          </article>
+          <!-- /single blog post -->
 
-                <!-- single blog post -->
-                <article class="col-12 col-md-6">
-                    <div class="post-item">
-                        <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post2.jpg' %}"
-                                alt="Generic placeholder image">
-                        </div>
-                        <div class="post-title">
-                            <h3 class="mt-0"> <a href=""> iPhone user blames Apple for $600K Bitcoin theft via fake
-                                    app</a> </h3>
-                        </div>
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <span>By</span> <a href="" class="">HELEN PARTZ</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span>By</span> <span> 31st March 2021</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="post-content">
-                            <p>A scam cryptocurrency app on Apple’s app distribution service App Store has reportedly
-                                stolen $600,000 Bitcoin (BTC) from one iOS user. Cryptocurrency holder Phillipe
-                                Christodoulou fell victim to a scam app on the App Store, losing nearly all his life
-                                savings to a fake crypto wallet application, The Washington Post reports Tuesday.</p>
-                        </div>
-                        <a class="btn btn-main" href="#">Read more</a>
-                    </div>
-                </article>
-                <!-- end single blog post -->
+          <!-- single blog post -->
+          <article class="col-12 col-md-6">
+            <div class="post-item">
+              <div class="post-thumb">
+                <img
+                  class="img-fluid shadow rounded"
+                  src="{% static 'home/images/post2.jpg' %}"
+                  alt="Generic placeholder image"
+                />
+              </div>
+              <div class="post-title">
+                <h3 class="mt-0">
+                  <a href="">
+                    iPhone user blames Apple for $600K Bitcoin theft via fake
+                    app</a
+                  >
+                </h3>
+              </div>
+              <div class="post-meta">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <span>By</span> <a href="" class="">HELEN PARTZ</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <span>By</span> <span> 31st March 2021</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="post-content">
+                <p>
+                  A scam cryptocurrency app on Apple’s app distribution service
+                  App Store has reportedly stolen $600,000 Bitcoin (BTC) from
+                  one iOS user. Cryptocurrency holder Phillipe Christodoulou
+                  fell victim to a scam app on the App Store, losing nearly all
+                  his life savings to a fake crypto wallet application, The
+                  Washington Post reports Tuesday.
+                </p>
+              </div>
+              <a class="btn btn-main" href="#">Read more</a>
+            </div>
+          </article>
+          <!-- end single blog post -->
 
-                <!-- single blog post -->
-                <article class="col-12 col-md-6">
-                    <div class="post-item blog-item ">
-                        <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post3.png' %}"
-                                alt="Generic placeholder image">
-                        </div>
-                        <div class="post-title blog-title">
-                            <h3 class="mt-0"> <a href="https://www.coindesk.com/bitcoin-btc-crash-correction">Bitcoin Crash vs. Correction: Do You Know the Difference?</a> </h3>
-                        </div>
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <span>By</span> <a href="" class="">Ollie Leech</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span> May 1, 2021</span>
-                                </li>
-                            </ul>
-                            
-                        </div>
-                        <div class="post-content">
-                            <p>Whether you're a first-time crypto user or a veteran trader, it's easy to get confused over crashes and corrections when both terms are thrown around so frequently.</p>
-                        </div>
-                        <a class="btn btn-main" href="https://www.coindesk.com/bitcoin-btc-crash-correction">Read more</a>
-                    </div>
-                </article>
-                <!-- /single blog post -->
+          <!-- single blog post -->
+          <article class="col-12 col-md-6">
+            <div class="post-item blog-item">
+              <div class="post-thumb">
+                <img
+                  class="img-fluid shadow rounded"
+                  src="{% static 'home/images/post3.png' %}"
+                  alt="Generic placeholder image"
+                />
+              </div>
+              <div class="post-title blog-title">
+                <h3 class="mt-0">
+                  <a
+                    href="https://www.coindesk.com/bitcoin-btc-crash-correction"
+                    >Bitcoin Crash vs. Correction: Do You Know the
+                    Difference?</a
+                  >
+                </h3>
+              </div>
+              <div class="post-meta">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <span>By</span> <a href="" class="">Ollie Leech</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <span> May 1, 2021</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="post-content">
+                <p>
+                  Whether you're a first-time crypto user or a veteran trader,
+                  it's easy to get confused over crashes and corrections when
+                  both terms are thrown around so frequently.
+                </p>
+              </div>
+              <a
+                class="btn btn-main"
+                href="https://www.coindesk.com/bitcoin-btc-crash-correction"
+                >Read more</a
+              >
+            </div>
+          </article>
+          <!-- /single blog post -->
 
-                 <!-- single blog post -->
-                 <article class="col-12 col-md-6">
-                    <div class="post-item">
-                        <div class="post-thumb">
-                            <img class="img-fluid shadow rounded" src="{% static 'home/images/post4.jpg' %}"
-                                alt="Generic placeholder image">
-                        </div>
-                        <div class="post-title">
-                            <h3 class="mt-0"> <a href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever"> Ether Breaks Above $3.2K for the First Time Ever</a> </h3>
-                        </div>
-                        <div class="post-meta">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <span>By</span> <a href="" class="">Muyao Shen</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span> May 3, 2021</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="post-content">
-                            <p> ETH, the second-largest cryptocurrency by market capitalization, went above $3,200 Monday for the first time in history, according to CoinDesk 20, after setting multiple all-time highs last week.</p>
-                        </div>
-                        <a class="btn btn-main" href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever">Read more</a>
-                    </div>
-                </article>
-                <!-- end single blog post -->
-
-            </div> <!-- end row -->
-        </div> <!-- end container -->
-    </section> <!-- end section -->
-
+          <!-- single blog post -->
+          <article class="col-12 col-md-6">
+            <div class="post-item">
+              <div class="post-thumb">
+                <img
+                  class="img-fluid shadow rounded"
+                  src="{% static 'home/images/post4.jpg' %}"
+                  alt="Generic placeholder image"
+                />
+              </div>
+              <div class="post-title">
+                <h3 class="mt-0">
+                  <a
+                    href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever"
+                  >
+                    Ether Breaks Above $3.2K for the First Time Ever</a
+                  >
+                </h3>
+              </div>
+              <div class="post-meta">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <span>By</span> <a href="" class="">Muyao Shen</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <span> May 3, 2021</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="post-content">
+                <p>
+                  ETH, the second-largest cryptocurrency by market
+                  capitalization, went above $3,200 Monday for the first time in
+                  history, according to CoinDesk 20, after setting multiple
+                  all-time highs last week.
+                </p>
+              </div>
+              <a
+                class="btn btn-main"
+                href="https://www.coindesk.com/ether-breaks-above-3k-for-the-first-time-ever"
+                >Read more</a
+              >
+            </div>
+          </article>
+          <!-- end single blog post -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end section -->
 
     <footer id="footer" class="bg-one">
-        <div class="top-footer">
-            <div class="container">
-                <div class="row ">
+      <div class="top-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
+              <h2>Quick Links</h2>
+              <ul>
+                <li>
+                  <a href="{% url 'home' %}"><h6>Home</h6></a>
+                </li>
+                <li>
+                  <a href="{% url 'cal_con' %}"
+                    ><h6>Cryptocurrency Converter</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'about' %}"><h6>About</h6></a>
+                </li>
+                <li>
+                  <a href="{% url 'faq' %}"><h6>FAQ's</h6></a>
+                </li>
+                <li>
+                  <a href="{% url 'blog' %}"><h6>Blogs</h6></a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of .col-sm-3 -->
 
-                    <div class="col-sm-4 col-md-4 col-lg-4 offset-md-3">
-                        <h2>Quick Links</h2>
-                        <ul>
-                            <li><a href="{% url 'home' %}"><h6>Home</h6></a></li>
-                            <li><a href="{% url 'cal_con' %}"><h6>Cryptocurrency Converter</h6></a></li>
-                            <li><a href="{% url 'about' %}"><h6>About</h6></a></li>
-                            <li><a href="{% url 'faq' %}"><h6>FAQ's</h6></a></li>
-                            <li><a href="{% url 'blog' %}"><h6>Blogs</h6></a></li>
-                        </ul>
-                    </div>
-                    <!-- End of .col-sm-3 -->
-
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <h2>Follow Us</h2>
-                        <ul>
-                            <li><a href="https://www.facebook.com/Cryptos-100778582123682"><h6>Facebook</h6></a></li>
-                            <li><a href="https://twitter.com/Cryptos95647385"><h6>Twitter</h6></a></li>
-                            <li><a href="cryptossolution@gmail.com"><h6>Gmail</h6></a></li>
-                        </ul>
-                    </div>
-                    <!-- End of .col-sm-3 -->
-
-                </div>
-            </div> <!-- end container -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <h2>Follow Us</h2>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/Cryptos-100778582123682"
+                    ><h6>Facebook</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="https://twitter.com/Cryptos95647385"
+                    ><h6>Twitter</h6></a
+                  >
+                </li>
+                <li>
+                  <a href="cryptossolution@gmail.com"><h6>Gmail</h6></a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of .col-sm-3 -->
+          </div>
         </div>
-
-    </footer> <!-- end footer -->
+        <!-- end container -->
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <!-- end Footer Area
     ========================================== -->
-
 
     <!-- 
     Essential Scripts
@@ -295,6 +379,23 @@ Fixed Navigation
     <!-- Custom js -->
     <script src="{% static 'home/js/script.js' %}"></script>
 
-</body>
-
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "97a2d113-169f-4122-812c-67c0c00f2677", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "4540dbcc-c890-4ee6-938f-2fe37c89e5e0", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
 </html>

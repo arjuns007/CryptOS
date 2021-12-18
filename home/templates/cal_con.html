@@ -228,23 +228,18 @@ Fixed Navigation
     <!-- Custom js -->
     <script src="{% static 'home/js/script.js' %}"></script>
 
-    <script type="text/javascript">
-        (function (d, m) {
-          var kommunicateSettings = {
-            appId: "3e1c8c28178f5de1e2122bb8f7ae62411",
-            popupWidget: true,
-            automaticChatOpenOnNavigation: true,
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "97a2d113-169f-4122-812c-67c0c00f2677", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "4540dbcc-c890-4ee6-938f-2fe37c89e5e0", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
           };
-          var s = document.createElement("script");
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-          var h = document.getElementsByTagName("head")[0];
-          h.appendChild(s);
-          window.kommunicate = m;
-          m._globals = kommunicateSettings;
-        })(document, window.kommunicate || {});
-        /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+          document.head.appendChild(t);
+        });
       </script>
 
 </body>
