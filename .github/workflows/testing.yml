@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  
+
   pull_request:
     branches:
       - main
@@ -15,19 +15,37 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Django Testing
-      run: |
-        python3 manage.py test
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Django Testing
+        run: |
+          python3 manage.py test
+
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v2
+        with:
+          # mail server settings
+          server_address: smtp.gmail.com
+          server_port: 465
+          # user credentials
+          username: cryptosjenkins@gmail.com
+          password: Cryptos_jenkins
+          # email subject
+          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          # email body as text
+          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}.
+          # comma-separated string, send email to
+          to: aman.mehra18@st.niituniversity.in, mayank.gubba18@st.niituniversity.in, akshat.bhandari18@st.niituniversity.in, arjun.seth18@st.niituniversity.in, divtej.bindra18@st.niituniversity.in
+          # from email name
+          from: Cryptos
