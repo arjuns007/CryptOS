@@ -1,6 +1,6 @@
 import unittest
 import requests
-from . import models
+
 
 class DataTest(unittest.TestCase):
                  

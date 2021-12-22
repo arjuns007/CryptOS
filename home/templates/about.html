@@ -43,80 +43,89 @@
   </head>
 
   <body id="body">
-   <!--
+    <!--
 Fixed Navigation
 ==================================== -->
-<section class="top-header">
-  <div class="container-fluid">
-      <marquee  onmouseover="this.stop();" onmouseout="this.start();"><div class="row">
-          <div class="col-md-12">
-              
+    <section class="top-header">
+      <div class="container-fluid">
+        <marquee onmouseover="this.stop();" onmouseout="this.start();"
+          ><div class="row">
+            <div class="col-md-12">
               <ul class="currency-status">
-              {% if top_bar %}
-                  {% for obj in top_bar %}   
-                      <li>
-                          <a href="#">
-                              <i class= '{{obj.class}}' ></i>
-                              <span>{{obj.sym}}/USD</span>
-                              <span>{{obj.curr_p}}</span>
-                          </a>
-                      </li>
-                  {% endfor %}
-              {% endif  %}    
-                                         
-              </ul>
-              
-          </div>
-      </div>
-  </marquee>
-  </div>
-</section>
-<section class="header  navigation">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-12">
-              <nav class="navbar navbar-expand-lg">
-                  <a class="navbar-brand" href="{% url 'home' %}">
-                      <img src="{% static 'home/images/logo.png' %}" alt="logo">
+                {% if top_bar %} {% for obj in top_bar %}
+                <li>
+                  <a href="#">
+                    <i class="{{obj.class}}"></i>
+                    <span>{{obj.sym}}/USD</span>
+                    <span>{{obj.curr_p}}</span>
                   </a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse"
-                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                      aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="tf-ion-android-menu"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav ml-auto">
-                          <li class="nav-item active">
-                              <a class="nav-link" href="{% url 'home' %}">Home <span
-                                      class="sr-only">(current)</span></a>
-                          </li>
-                          <!-- <li class="nav-item">
+                </li>
+                {% endfor %} {% endif %}
+              </ul>
+            </div>
+          </div>
+        </marquee>
+      </div>
+    </section>
+    <section class="header navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'home/images/logo.png' %}" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="tf-ion-android-menu"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}"
+                      >Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <!-- <li class="nav-item">
                               <a class="nav-link" href="exchange.html">Exchange</a>
                           </li> -->
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'cal_con' %}">Cryptocurrency Converter</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'guide' %}">Guide</a>
-                          </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cal_con' %}"
+                      >Cryptocurrency Converter</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pred' %}"
+                      >Price Prediction</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'faq' %}">F.A.Q</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'guide' %}">Guide</a>
+                  </li>
 
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                          </li>
-                      </ul>
-                  </div>
-              </nav>
-
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
+        </div>
       </div>
-  </div>
-</section> 
+    </section>
 
     <!-- Start Our Team
 		=========================================== -->
