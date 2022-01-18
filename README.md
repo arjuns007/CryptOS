@@ -14,7 +14,7 @@ We all know that CryptoCurrency is the next big thing, but do we have the right 
 
 * CryptoCurrency Guide is there for someone who is absolutely new in Crypto and is looking for some guide and knowledge.
 
-* **CryptOS USP, which makes it different and unique from other similar platforms like CoinDCX, WazirX, CoinSwitch Kuber etc. is the feature of CryptoCurrency Price Prediction Forecast. CryptOS uses Machine Learning Algorithms on the backend and upon the historical performance of a crypto, forecasts its price with an excellent accuracy**
+* **CryptOS USP, which makes it different and unique from other similar platforms like CoinDCX, WazirX, CoinSwitch Kuber etc. is the feature of CryptoCurrency Price Prediction Forecast. CryptOS uses Machine Learning Algorithms on the backend and upon the historical performance of a crypto, forecasts its price with an excellent accuracy.**
 
 
 
