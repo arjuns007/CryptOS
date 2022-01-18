@@ -21,20 +21,6 @@ We all know that CryptoCurrency is the next big thing, but do we have the right 
 <div align="center">
 
 
- 
-  [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-
-
-</div>
-
-## 🎉 Badges <a name = "badges"></a>
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/Naereen/)
-[![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)
-
 ![Screenshot 2022-01-18 at 2 20 47 PM](https://user-images.githubusercontent.com/44583018/149904808-d0313164-425b-4d77-a44d-cc878f98ab4c.png)
 ![Screenshot 2021-05-04 at 1 05 56 AM](https://user-images.githubusercontent.com/44583018/116924486-91129f80-ac75-11eb-8a19-5340669ffc0d.png)
 ![Screenshot 2022-01-18 at 2 20 54 PM](https://user-images.githubusercontent.com/44583018/149905150-1308c351-40d5-4db3-8d70-c01e1e4346c0.png)
