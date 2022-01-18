@@ -1,18 +1,20 @@
 # CryptOS
-We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information!
+We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-world problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information!
 
 # Main features of CryptOS:
-* On the hompeage, there are various different information about CryptoCurrencies which is real time so that you get the latest insights in a very minimal time and at a faster pace. On the top of every page there is a slider which indicates that whether that Crypto has a price increase/decrease in the past 24hr along with it's latest updated price.
+* On the homepage, there are various different information about CryptoCurrencies which is real-time so that you get the latest insights in a very minimal time and at a faster pace. On the top of every page, there is a slider that indicates whether that Crypto has had a price increase/decrease in the past 24hr along with its latest updated price.
 
-* CryptoCurrency Bot acts like a personal assistant and user can ask various related questions related to crypto.
+* CryptoCurrency Bot acts like a personal assistant and users can ask various related questions related to crypto.
 
-* CryptoCurrency Calculator converts the price of a particular crypto to any currency (USD,INR etc.).
+* CryptoCurrency Calculator converts the price of particular crypto to any currency (USD, INR etc.).
 
-* CryptoCurrency Price Prediction model forecasts the price of the cryptocurrency upto 1 month based on the past performance of that crypto and helps the user in taking an informed decision whether to invest in that particular crypto or not.
+* Cryptocurrency Price Prediction model forecasts the price of the cryptocurrency up to 1 month based on the past performance of that crypto and helps the user in making an informed decision whether to invest in that particular crypto or not.
 
 * CryptoCurrency Blogs are there for providing related information through various blogs.
 
 * CryptoCurrency Guide is there for someone who is absolutely new in Crypto and is looking for some guide and knowledge.
+
+* **CryptOS USP, which makes it different and unique from other similar platforms like CoinDCX, WazirX, CoinSwitch Kuber etc. is the feature of CryptoCurrency Price Prediction Forecast. CryptOS uses Machine Learning Algorithms on the backend and upon the historical performance of a crypto, forecasts its price with an excellent accuracy**
 
 
 
