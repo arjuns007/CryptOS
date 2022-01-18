@@ -41,6 +41,13 @@ PS- All the data about CryptoCurrency is real-time so that you get the latest in
 ![Screenshot 2022-01-18 at 2 25 52 PM](https://user-images.githubusercontent.com/44583018/149906769-9b84ecd0-c214-409b-8077-d8e6d0768896.png)
 ![Screenshot 2022-01-18 at 2 25 58 PM](https://user-images.githubusercontent.com/44583018/149906817-af990bb6-ef15-48d1-bb72-819583b3796e.png)
 ![Screenshot 2022-01-18 at 2 25 23 PM](https://user-images.githubusercontent.com/44583018/149906892-9b975540-031d-4fd7-95f3-e555c4ef70e0.png)
+![](https://user-images.githubusercontent.com/44583018/116924553-a4be0600-ac75-11eb-8b32-ff0ad01861a6.png)
+
+
+
+
+
+
 
 
 
