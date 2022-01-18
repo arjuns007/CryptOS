@@ -1,6 +1,11 @@
 # CryptOS
-We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information! Here you can find each and every detailed information of any Crypto,the right guide to invest for newbies and almost everything you need about CrytoCurrency!
-PS- All the data about CryptoCurrency is real-time so that you get the latest insights in a very minimal time and at a faster pace!
+We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information! Here you can find each and every detailed information of any Crypto,the right guide to invest for newbies and almost everything you need about CrytoCurrency! All the data about CryptoCurrency is real-time so that you get the latest insights in a very minimal time and at a faster pace!
+
+# Main features of CryptOS:
+* First item
+* Second item
+* Third item
+* Fourth item
 
 <div align="center">
 
