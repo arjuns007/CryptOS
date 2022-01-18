@@ -1,11 +1,20 @@
 # CryptOS
-We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information! Here you can find each and every detailed information of any Crypto,the right guide to invest for newbies and almost everything you need about CrytoCurrency! All the data about CryptoCurrency is real-time so that you get the latest insights in a very minimal time and at a faster pace!
+We all know that CryptoCurrency is the next big thing, but do we have the right direction in this domain? To solve this real-word problem and to guide people with the right knowledge, we have developed CyptOS which is your THE go-to website for all Cryptocurrency related information!
 
 # Main features of CryptOS:
-* First item
-* Second item
-* Third item
-* Fourth item
+* On the hompeage, there are various different information about CryptoCurrencies which is real time so that you get the latest insights in a very minimal time and at a faster pace. On the top of every page there is a slider which indicates that whether that Crypto has a price increase/decrease in the past 24hr along with it's latest updated price.
+
+* CryptoCurrency Bot acts like a personal assistant and user can ask various related questions related to crypto.
+
+* CryptoCurrency Calculator converts the price of a particular crypto to any currency (USD,INR etc.).
+
+* CryptoCurrency Price Prediction model forecasts the price of the cryptocurrency upto 1 month based on the past performance of that crypto and helps the user in taking an informed decision whether to invest in that particular crypto or not.
+
+* CryptoCurrency Blogs are there for providing related information through various blogs.
+
+* CryptoCurrency Guide is there for someone who is absolutely new in Crypto and is looking for some guide and knowledge.
+
+
 
 <div align="center">
 
