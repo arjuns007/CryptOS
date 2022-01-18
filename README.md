@@ -20,38 +20,27 @@ PS- All the data about CryptoCurrency is real-time so that you get the latest in
 [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)
 
 
-
-![Screenshot 2021-05-04 at 1 05 19 AM](https://user-images.githubusercontent.com/44583018/116924481-8eb04580-ac75-11eb-89aa-95435249ba7f.png)
-
+![Screenshot 2022-01-18 at 2 20 47 PM](https://user-images.githubusercontent.com/44583018/149904808-d0313164-425b-4d77-a44d-cc878f98ab4c.png)
 ![Screenshot 2021-05-04 at 1 05 56 AM](https://user-images.githubusercontent.com/44583018/116924486-91129f80-ac75-11eb-8a19-5340669ffc0d.png)
+![Screenshot 2022-01-18 at 2 20 54 PM](https://user-images.githubusercontent.com/44583018/149905150-1308c351-40d5-4db3-8d70-c01e1e4346c0.png)
+![Screenshot 2022-01-18 at 2 14 35 PM](https://user-images.githubusercontent.com/44583018/149905294-bbb46fd4-6d6c-4d32-a470-861a3faa0bc6.png)
+![Screenshot 2022-01-18 at 2 14 49 PM](https://user-images.githubusercontent.com/44583018/149905400-0b6b9c93-57ba-4033-b2f8-531989b6ff2c.png)
+![Screenshot 2022-01-18 at 2 17 23 PM](https://user-images.githubusercontent.com/44583018/149905493-b45363cc-62ba-4fbe-826d-3e09d8f4ca68.png)
+![Screenshot 2022-01-18 at 2 23 00 PM](https://user-images.githubusercontent.com/44583018/149905659-8819e72f-bd6d-4baf-8179-7034f538285c.png) 
+![Screenshot 2022-01-18 at 2 23 08 PM](https://user-images.githubusercontent.com/44583018/149905758-f792752e-243f-4e9e-adb1-98ec59fbfa78.png)
+![Screenshot 2022-01-18 at 2 23 15 PM](https://user-images.githubusercontent.com/44583018/149905816-d5f750a5-e884-4647-a6b8-2d0299076b3c.png)
+![Screenshot 2022-01-18 at 2 23 37 PM](https://user-images.githubusercontent.com/44583018/149905875-38bc815a-1a6b-4313-9431-ad564089d7bf.png)
+![Screenshot 2022-01-18 at 2 23 44 PM](https://user-images.githubusercontent.com/44583018/149906080-0fd88305-e81f-4d83-8f7b-46a774430b96.png)
+![Screenshot 2022-01-18 at 2 24 21 PM](https://user-images.githubusercontent.com/44583018/149906216-4f60760c-66d0-492a-a352-4001d99098ce.png)
+![Screenshot 2022-01-18 at 2 24 33 PM](https://user-images.githubusercontent.com/44583018/149906304-f8124a16-7096-4c1f-802e-e57169ef8ea5.png)
+![Screenshot 2022-01-18 at 2 24 58 PM](https://user-images.githubusercontent.com/44583018/149906507-f5133281-0214-41bc-abaf-48089d4042c1.png)
+![Screenshot 2022-01-18 at 2 25 05 PM](https://user-images.githubusercontent.com/44583018/149906556-a9618313-300e-4414-ac90-06dad0fc40d8.png)
+![Screenshot 2022-01-18 at 2 25 11 PM](https://user-images.githubusercontent.com/44583018/149906596-4f706df8-823c-4045-882c-c939b65910d6.png)
+![Screenshot 2022-01-18 at 2 25 45 PM](https://user-images.githubusercontent.com/44583018/149906688-8165a811-eb0d-4e21-a866-66cca27349c3.png)
+![Screenshot 2022-01-18 at 2 25 52 PM](https://user-images.githubusercontent.com/44583018/149906769-9b84ecd0-c214-409b-8077-d8e6d0768896.png)
+![Screenshot 2022-01-18 at 2 25 58 PM](https://user-images.githubusercontent.com/44583018/149906817-af990bb6-ef15-48d1-bb72-819583b3796e.png)
+![Screenshot 2022-01-18 at 2 25 23 PM](https://user-images.githubusercontent.com/44583018/149906892-9b975540-031d-4fd7-95f3-e555c4ef70e0.png)
 
-![Screenshot 2021-05-04 at 1 06 05 AM](https://user-images.githubusercontent.com/44583018/116924491-92dc6300-ac75-11eb-9b1c-56ca42212e0d.png)
 
-![Screenshot 2021-05-04 at 1 06 49 AM](https://user-images.githubusercontent.com/44583018/116924498-94a62680-ac75-11eb-9467-db4f82d1d67f.png)
 
-![Screenshot 2021-05-04 at 1 06 55 AM](https://user-images.githubusercontent.com/44583018/116924503-95d75380-ac75-11eb-9be1-1401a0ad9492.png)
-
-![Screenshot 2021-05-04 at 1 06 57 AM](https://user-images.githubusercontent.com/44583018/116924509-97a11700-ac75-11eb-9b57-d99f20147979.png)
-
-![Screenshot 2021-05-04 at 1 07 00 AM](https://user-images.githubusercontent.com/44583018/116924517-996ada80-ac75-11eb-975c-f01df8b1f8af.png)
-
-![Screenshot 2021-05-04 at 1 07 09 AM](https://user-images.githubusercontent.com/44583018/116924524-9b349e00-ac75-11eb-874c-43014c473a53.png)
-
-![Screenshot 2021-05-04 at 1 07 25 AM](https://user-images.githubusercontent.com/44583018/116924529-9cfe6180-ac75-11eb-8e27-a358ecd61898.png)
-
-![Screenshot 2021-05-04 at 1 07 32 AM](https://user-images.githubusercontent.com/44583018/116924531-9e2f8e80-ac75-11eb-9b7e-39b67c67828e.png)
-
-![Screenshot 2021-05-04 at 1 07 38 AM](https://user-images.githubusercontent.com/44583018/116924534-9ff95200-ac75-11eb-9722-ae0348271d74.png)
-
-![Screenshot 2021-05-04 at 1 08 28 AM](https://user-images.githubusercontent.com/44583018/116924541-a25bac00-ac75-11eb-8a3a-1db5e7923d0c.png)
-
-![Screenshot 2021-05-04 at 1 08 35 AM](https://user-images.githubusercontent.com/44583018/116924553-a4be0600-ac75-11eb-8b32-ff0ad01861a6.png)
-
-![Screenshot 2021-05-04 at 1 08 54 AM](https://user-images.githubusercontent.com/44583018/116924559-a687c980-ac75-11eb-9391-1b22df1c8e93.png)
-
-![Screenshot 2021-05-04 at 1 08 59 AM](https://user-images.githubusercontent.com/44583018/116924563-a7b8f680-ac75-11eb-8d0e-0a6b0517f5f8.png)
-
-![Screenshot 2021-05-04 at 1 09 00 AM](https://user-images.githubusercontent.com/44583018/116924571-a982ba00-ac75-11eb-92d9-4164d03570ae.png)
-
-![Screenshot 2021-05-04 at 1 09 35 AM](https://user-images.githubusercontent.com/44583018/116924576-ab4c7d80-ac75-11eb-8b1f-d07ccbdbaa44.png)
 
